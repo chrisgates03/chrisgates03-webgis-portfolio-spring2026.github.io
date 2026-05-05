@@ -13,7 +13,27 @@ body{
 body {color: black}
 
 
+/*
+Source - https://stackoverflow.com/a/41854998
+Posted by Syden
+Retrieved 2026-05-05, License - CC BY-SA 3.0
+*/
 
+div.NavBar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.NavBar div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  width: 150px;
+  height: 150px;
+}
 
 table, th, td {
   border: 1 px solid black;
