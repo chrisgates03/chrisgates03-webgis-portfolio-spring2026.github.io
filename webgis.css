@@ -20,6 +20,40 @@ table, th, td {
   border-collapse: collapse;
 }
 
+a{
+	color:blue;
+}
+
+nav a, footer div a{
+	margin:25px 5px;
+}
+
+footer{
+	margin-top:40px;
+	text-align: center;
+}
+
+body{
+	font-family: Garamond, serif;
+	margin: auto;
+	padding:25px;
+	max-width: 600px;
+	font-size:18px;
+	text-align: center;
+	background-color:white;
+	position: relative;
+}
+
+.ph-banner{
+	font-family: Garamond, serif;
+	background-color: black;
+	color: white;
+	padding: 4px;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+
 
 
 
