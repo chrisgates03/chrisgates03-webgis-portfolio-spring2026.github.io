@@ -17,80 +17,49 @@
       </tr>
     </table>
 
-<div class="NavBar">
-  <div>
-    <img src="http://placehold.it/100x100" class="icons" /><a href=""> test link</a>
-  </div>
-  <div>
-    <img src="http://placehold.it/100x100" class="icons" /><a href=""> test link</a>
-  </div>
-  <div>
-    <img src="http://placehold.it/100x100" class="icons" /><a href=""> test link</a>
-  </div>
+<div class="container">
+
+    <div class="card">
+        <div class="img-wrapper">
+            <img src="https://picsum.photos/id/1015/400/400" alt="Project view">
+            <div class="info-btn" data-info='{"title":"Aurora","desc":"Mountain landscape project shot in Norway.","extra":"2024 · Nature series"}'>ⓘ</div>
+        </div>
+        <div class="caption">
+            <h3>Red Hills Salamander <i>Phaeognathuus hubrichti</i></h3>
+            <p>Distribution Map and Species Info</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-wrapper">
+            <img src="https://picsum.photos/id/104/400/400" >
+            <div class="info-btn" data-info='{"title":"Urban Flow","desc":".","extra":""}'>ⓘ</div>
+        </div>
+        <div class="caption">
+            <h3>The Great Western MA Outdoor Skating Crawl of 2026</h3>
+            <p>How many frozen lakes can I skate on in one day?</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-wrapper">
+            <img src="https://picsum.photos/id/22/400/400" alt="Abstract art">
+            <div class="info-btn" data-info='{"title":"Boston Ligthouses","desc":"Generative digital art inspired by bird migration.","extra":""}'>ⓘ</div>
+        </div>
+        <div class="caption">
+            <h3>Boston Lighthouses Map</h3>
+            <p></p>
+        </div>
+    </div>
 </div>
-<div class="portfolio-grid">
-    <!-- Portfolio Item 1 -->
-    <div class="portfolio-card">
-        <div class="image-wrapper">
-            <!-- the clickable image link (main project URL) -->
-            <a href="#" class="image-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiImQvQF1J5TqbKWXKB1UuAoQuhtSmwZp5iw&s" alt="Mountain landscape project" loading="lazy">
-            </a>
-            <!-- small information button on the corner (top-right) -->
-            <div class="info-btn" data-project="1">
-                <span>ⓘ</span>
-            </div>
-        </div>
-        <div class="card-caption">
-            <h4>The Red Hills Salamander Distribution</h4>
-            <p>Alabama's Elusive Endemic Species</p>
-        </div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h3 id="popupTitle">Title</h3>
+        <p id="popupDesc">Description here</p>
+        <p id="popupExtra" style="font-size:0.75rem; color:#6f7e8c;"></p>
+        <button class="close-popup" id="closeBtn">Close</button>
     </div>
 
-    <!-- Portfolio Item 2 -->
-    <div class="portfolio-card">
-        <div class="image-wrapper">
-            <a href="#" class="image-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/472845539_10234252920921591_8089804656596773541_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=5ELgIRu5AZ8Q7kNvwFRwE53&_nc_oc=AdoTOAFDG9niaLCYwv3LwWPsTz44kBaUyCoo-Z5rjtdIYbsp9KQEsF-qS7mVntjfBK7ww5Ls_9BXwvcP-Ikmwo_S&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=K-KsZT8AQWsSMbNZEhH92Q&_nc_ss=7b289&oh=00_Af7_JT9b-A2XgKOtLqdgNSTxHL1ugApmO1E7Ss_NR6Dpow&oe=6A01C65B" alt="Modern architecture study" loading="lazy">
-            </a>
-            <div class="info-btn" data-project="2">
-                <span>ⓘ</span>
-            </div>
-        </div>
-        <div class="card-caption">
-            <h4>Urban Flow</h4>
-            <p>Architecture & Interactive Design</p>
-        </div>
-    </div>
-
-    <!-- Portfolio Item 3 -->
-    <div class="portfolio-card">
-        <div class="image-wrapper">
-            <a href="#" class="image-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://www.nps.gov/boha/learn/historyculture/images/BostonLight3-AMoorehead.JPG?maxwidth=1300&autorotate=false" alt="Creative studio work" loading="lazy">
-            </a>
-            <div class="info-btn" data-project="3">
-                <span>ⓘ</span>
-            </div>
-        </div>
-        <div class="card-caption">
-            <h4>Bird’s Eye Journal</h4>
-            <p>Editorial / Visual storytelling</p>
-        </div>
-    </div>
-
-<!-- Popup Modal Structure (hidden by default) -->
-<div id="infoPopup" class="popup-overlay">
-    <div class="popup-card">
-        <div class="popup-header">
-            <h3 id="popupTitle">Project Details</h3>
-            <button class="close-popup" id="closePopupBtn" aria-label="Close popup">✕</button>
-        </div>
-        <div class="popup-body">
-            <p id="popupDescription">Loading project information...</p>
-            <div id="popupMeta" class="project-meta"></div>
-        </div>
-    </div>
 </div>
 
     <footer>
