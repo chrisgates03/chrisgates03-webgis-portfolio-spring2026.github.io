@@ -1,244 +1,151 @@
 
 
-h1{
-  position: relative; 
-padding: 20px;
-}
 
-h1{
-  position: absolute;
-  top: 10px;
-  left: 100px;
-  z-index: 10; /* Ensures it stays above the other */
-}
-
-
-
-* {
-            margin: 0;
+           { margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            background: linear-gradient(145deg, #f6f9fc 0%, #e9f0f5 100%);
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-            display: flex;
+          display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 2rem;
         }
 
-        /* portfolio grid container */
-        .portfolio-grid {
-            display: flex;
-            flex-wrap: wrap;
+   
+        .container {
+          display: flex
+            gap: 2rem;
             justify-content: center;
-            gap: 2.5rem;
-            max-width: 1300px;
+            flex-wrap: wrap;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-      
-        .portfolio-card {
+
+        .card {
+            width: 280px;
             background: white;
-           
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.25s ease, box-shadow 0.3s ease;
             overflow: hidden;
-            width: 320px;
-            backdrop-filter: blur(0px);
+            box-shadow: 0 8px 20px black;
+           
         }
 
-        .portfolio-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 28px 36px -14px rgba(0, 0, 0, 0.2);
+        .card:hover {
+            transform:TranslateY(-4px);
         }
 
-        .image-wrapper {
+        
+        .img-wrapper {
             position: relative;
-            display: block;   /* ensures the link behaves like block container */
-            cursor: pointer;
-            background: #2c3e4e;
+            background: grey;
         }
 
-        /* image itself: responsive, block, smooth */
-        .image-wrapper img {
-            display: block;
+      .img-wrapper img {
             width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 1 / 1; 
             object-fit: cover;
-            transition: filter 0.2s ease;
-        }
+            display: block}
 
-     
+        
         .info-btn {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(4px);
-            width: 36px;
-            height: 36px;
-            
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            background: black;
+        
+          
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            transition: all 0.2s ease;
-            z-index: 12;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            font-size: 1.4rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: bold;
             color: white;
-            font-family: monospace;
-            line-height: 1;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid grey;
+            z-index: 5;
         }
 
-        /* subtle hover effect for button */
         .info-btn:hover {
-            background: rgba(0, 0, 0, 0.85);
+            background: black;
             transform: scale(1.05);
-            border-color: rgba(255, 255, 255, 0.7);
         }
 
-      
+     
+        .caption {
+            padding: 0.9rem 1rem;
+        }
 
-        /* The popup modal (light/dark card) — hidden by default */
-        .popup-overlay {
+        .caption h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .caption p {
+            font-size: 0.75rem;
+            color: #5a6874;
+        }
+
+    
+        .popup {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
- backdrop-filter: blur(5px);
+            background: rgba(0,0,0,0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
             visibility: hidden;
             opacity: 0;
-            transition: visibility 0.2s, opacity 0.2s ease;
+            z-index: 1000;
         }
 
-        .popup-overlay.active {
+        .popup.show {
             visibility: visible;
             opacity: 1;
         }
 
-        /* popup card design */
-        .popup-card {
-            background: #ffffff;
-            max-width: 380px;
+        .popup-content {
+            background: white;
+            max-width: 300px;
             width: 85%;
-            
-            box-shadow: 0 35px 50px -20px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-          
            
-            font-family: 'Inter', system-ui;
+            padding: 1.5rem;
+            text-align: center;
+           
         }
 
-        .popup-overlay.active .popup-card {
-            transform: scale(1);
+        .popup-content h3 {
+            margin-bottom: 0.6rem;
+            font-size: 1.3rem;
         }
 
-        .popup-header {
-            background: #1e2a36;
-            padding: 1.2rem 1.5rem;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .popup-header h3 {
-            font-weight: 600;
-            font-size: 1.35rem;
-            letter-spacing: -0.2px;
-            margin: 0;
+        .popup-content p {
+            font-size: 0.9rem;
+            color: #2c3e44;
+            margin-bottom: 1rem;
         }
 
         .close-popup {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            line-height: 1;
+            background: #1e2a32;
             color: white;
+            border: none;
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
             cursor: pointer;
-            transition: opacity 0.2s;
-            padding: 0 4px;
-            opacity: 0.8;
-        }
-
-        .close-popup:hover {
-            opacity: 1;
-        }
-
-        .popup-body {
-            padding: 1.5rem 1.8rem;
-            background: #fefefe;
-        }
-
-        .popup-body p {
-            color: #2c3e4e;
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
-            font-size: 1rem;
-        }
-
-        .popup-body .project-meta {
+            font-size: 0.8rem;
             margin-top: 0.5rem;
-            font-size: 0.85rem;
-            color: #5f7f9c;
-            border-top: 1px solid #e2edf2;
-            padding-top: 0.8rem;
         }
 
-        
-        .card-caption {
-            padding: 1rem 1.2rem 1.2rem;
-            background: white;
-        }
-
-        .card-caption h4 {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #1f2e3a;
-            margin-bottom: 0.3rem;
-        }
-
-        .card-caption p {
-            font-size: 0.85rem;
-            color: #54708f;
-        }
-
-  
-        @media (max-width: 700px) {
-            .portfolio-grid {
-                gap: 1.5rem;
-            }
-            .portfolio-card {
-                width: 280px;
-            }
-            .info-btn {
-                width: 32px;
-                height: 32px;
-                top: 8px;
-                right: 8px;
-                font-size: 1.2rem;
-            }
-        }
-
-        /* ensures the image link remains clickable (the entire image goes to project url) */
-        .image-link {
-            text-decoration: none;
-            display: block;
-        }
+       
 
 
 
