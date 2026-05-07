@@ -1,4 +1,4 @@
-// minimal javascript: get all info buttons
+
     const btns = document.querySelectorAll('.info-btn');
     const popup = document.getElementById('popup');
     const popupTitle = document.getElementById('popupTitle');
