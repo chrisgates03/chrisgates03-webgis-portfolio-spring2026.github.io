@@ -43,4 +43,4 @@ popup.addEventListener('click', (e) => {
         popup.classList.remove('show');
     }
    
-    closeBtn.addEventListener('click', closePopup);
+
