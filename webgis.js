@@ -54,8 +54,8 @@ cards.forEach((card, index) => {
         return}
 
 const urls = [
-    'https://chrisgates03.github.io/phubrichtimap/' //salamander map
-    'https://storymaps.arcgis.com/stories/3d693fd95b5045f0ac7e9d5bca514cf7' //storymap link, don't forget to publish changes
+    'https://chrisgates03.github.io/phubrichtimap/', //salamander map
+    'https://storymaps.arcgis.com/stories/3d693fd95b5045f0ac7e9d5bca514cf7', //storymap link, don't forget to publish changes
     'https://chrisgates03.github.io/bostonlighthouses/' //lighthouse map
         ];
 
