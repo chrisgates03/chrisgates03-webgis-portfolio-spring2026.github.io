@@ -66,3 +66,5 @@ const urls = [
     card.stlye.cursor = 'pointer';
     });
 
+    console.log('js is working :3);
+
