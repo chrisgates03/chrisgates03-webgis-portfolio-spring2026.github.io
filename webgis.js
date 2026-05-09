@@ -46,13 +46,14 @@ popup.addEventListener('click', (e) => {
 
 
 //will this make the cards clickable?
-const cards = document.queryselectorAll('.card');
+const cards = document.querySelectorAll('.card');
 
 cards.forEach((card, index) => {
     card.addEventListener('click', (e) => {
         //popup button triggers card click, this might fix, not sure if I understand thihs correctly
     if (e.target.classList.contains('info-btn')) {
-        return}
+        return;
+    }
 
 const urls = [
     'https://chrisgates03.github.io/phubrichtimap/', //salamander map
@@ -63,9 +64,10 @@ const urls = [
 //make them open in new tab?
         
    window.open(urls[index], '_blank');
-
-    card.style.cursor = 'pointer';
     });
+
+    card.style.cursor = 'pointer';    
+});
 
     console.log('js is working :3');
 
