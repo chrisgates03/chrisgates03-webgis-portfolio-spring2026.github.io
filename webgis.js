@@ -46,7 +46,8 @@ popup.addEventListener('click', (e) => {
 
 
 //will this make the cards clickable?
-const cards = document.queryselectorAll('card');
+const cards = document.queryselectorAll('.card');
+
 cards.forEach((card, index) => {
     card.addEventListener('click', (e) => {
         //popup button triggers card click, this might fix, not sure if I understand thihs correctly
@@ -63,8 +64,8 @@ const urls = [
         
    window.open(urls[index], '_blank');
 
-    card.stlye.cursor = 'pointer';
+    card.style.cursor = 'pointer';
     });
 
-    console.log('js is working :3);
+    console.log('js is working :3');
 
