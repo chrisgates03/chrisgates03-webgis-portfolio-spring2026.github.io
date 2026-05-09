@@ -71,7 +71,7 @@ p2 {
         
         .img-wrapper {
             position: relative;
-            background: grey;
+            background: none;
         }
 
       .img-wrapper img {
