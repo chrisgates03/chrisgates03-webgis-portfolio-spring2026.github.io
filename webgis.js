@@ -23,8 +23,6 @@
 //did I do this right? it works i guess
     btns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            e.preventDefault();
             const infoJson = btn.getAttribute('data-info');
             if (infoJson) {
                 showPopup(infoJson);
